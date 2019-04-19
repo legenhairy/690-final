@@ -34,3 +34,5 @@ An app that uses the Yelp API to find the nearest restaurant from a user.
   Last two must have features assigned to: @AlexHall2016
   
   Work estimate for each team member should be around 5-10 hours. (need time to understand the Yelp API)
+### Notes
+  We worked on the ReadME collaboratively and only saw the "Each user has to have contributed to the readme." After the fact.
