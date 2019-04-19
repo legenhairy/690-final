@@ -23,7 +23,7 @@ An app that uses the Yelp API to find the nearest restaurant from a user.
 
 
 ## Wireframes (to be completed soon)
-<img src="" width=600>
+<img src="http://g.recordit.co/QahINCecvU.gif" width=600>
 
 ## Estimated time to Complete each feature(in hrs)
   It will take about a minimum of 1-2 hours to complete each of the must have features.   
