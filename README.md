@@ -22,7 +22,7 @@ An app that uses the Yelp API to find the nearest restaurant from a user.
 * User can see a Google Maps popup.
 
 
-## Wireframes (to be completed soon)
+## Wireframes 
 <img src="http://g.recordit.co/QahINCecvU.gif" width=600>
 
 ## Estimated time to Complete each feature(in hrs)
