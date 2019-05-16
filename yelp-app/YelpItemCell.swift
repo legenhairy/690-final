@@ -10,6 +10,10 @@ import UIKit
 
 class YelpItemCell: UITableViewCell {
 
+    @IBOutlet weak var businessLabel: UILabel!
+    @IBOutlet weak var businessInfo: UILabel!
+    @IBOutlet weak var businessImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

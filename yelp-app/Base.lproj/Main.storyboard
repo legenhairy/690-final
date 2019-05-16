@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vbf-fb-Vp9">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="134" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vbf-fb-Vp9">
                                 <rect key="frame" x="0.0" y="120" width="375" height="547"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -29,7 +29,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="124.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D06-bP-cjf">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D06-bP-cjf">
                                                     <rect key="frame" x="8" y="0.0" width="121" height="128"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -50,6 +50,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="businessImage" destination="D06-bP-cjf" id="YyM-Pq-IQg"/>
+                                            <outlet property="businessInfo" destination="gcp-Lh-2wO" id="Ohh-qN-Sjr"/>
+                                            <outlet property="businessLabel" destination="xbE-4K-T5R" id="WCR-rs-wip"/>
                                             <segue destination="QJK-vV-fUt" kind="show" id="BqZ-Cv-yiJ"/>
                                         </connections>
                                     </tableViewCell>
@@ -93,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vdK-c0-qFF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3020" y="447"/>
+            <point key="canvasLocation" x="2975" y="132"/>
         </scene>
         <!--Profile-->
         <scene sceneID="ocQ-Jw-2f6">
@@ -105,7 +108,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="mSn-0c-UGs"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profle" id="6bt-Qj-Jno"/>
+                    <navigationItem key="navigationItem" title="Profle" id="6bt-Qj-Jno">
+                        <barButtonItem key="rightBarButtonItem" title="Take Picture" id="CRG-1h-P49"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I11-Ys-WL2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
