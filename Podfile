@@ -7,6 +7,7 @@ target 'yelp-app' do
 
   # Pods for yelp-app
   pod 'Alamofire'	
+  pod 'CDYelpFusionKit', '1.5.1'
 	
   target 'yelp-appTests' do
     inherit! :search_paths
