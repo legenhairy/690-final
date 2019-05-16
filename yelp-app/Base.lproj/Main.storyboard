@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vbf-fb-Vp9">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="134" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vbf-fb-Vp9">
                                 <rect key="frame" x="0.0" y="120" width="375" height="547"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -29,7 +29,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="124.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D06-bP-cjf">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D06-bP-cjf">
                                                     <rect key="frame" x="8" y="0.0" width="121" height="128"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -50,6 +50,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="businessImage" destination="D06-bP-cjf" id="YyM-Pq-IQg"/>
+                                            <outlet property="businessInfo" destination="gcp-Lh-2wO" id="Ohh-qN-Sjr"/>
+                                            <outlet property="businessLabel" destination="xbE-4K-T5R" id="WCR-rs-wip"/>
                                             <segue destination="QJK-vV-fUt" kind="show" id="BqZ-Cv-yiJ"/>
                                         </connections>
                                     </tableViewCell>
@@ -93,40 +96,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vdK-c0-qFF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3020" y="447"/>
+            <point key="canvasLocation" x="2975" y="132"/>
         </scene>
         <!--Profile-->
         <scene sceneID="ocQ-Jw-2f6">
             <objects>
-                <viewController title="Profile" id="aNo-KT-ADJ" customClass="ProfileViewController" customModule="yelp_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Profile" id="aNo-KT-ADJ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hdr-ur-5Rf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LuF-g5-66O">
-                                <rect key="frame" x="0.0" y="64" width="118" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtO-vS-xDi">
-                                <rect key="frame" x="126" y="87" width="233" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="mSn-0c-UGs"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profle" id="6bt-Qj-Jno"/>
-                    <connections>
-                        <outlet property="NameLabelOutlet" destination="mtO-vS-xDi" id="bJw-HN-pfx"/>
-                        <outlet property="ProfileImageOutlet" destination="LuF-g5-66O" id="Ovu-go-I5i"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="Profle" id="6bt-Qj-Jno">
+                        <barButtonItem key="rightBarButtonItem" title="Take Picture" id="CRG-1h-P49"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I11-Ys-WL2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2045.5999999999999" y="-609.44527736131943"/>
+            <point key="canvasLocation" x="2046" y="-609"/>
         </scene>
         <!--Profile-->
         <scene sceneID="2bu-ms-cb2">

@@ -1,5 +1,7 @@
 PODS:
   - Alamofire (4.8.1)
+  - AlamofireImage (3.5.0):
+    - Alamofire (~> 4.8)
   - AlamofireObjectMapper (5.2.0):
     - Alamofire (~> 4.7)
     - ObjectMapper (~> 3.4)
@@ -9,21 +11,24 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - AlamofireImage
   - CDYelpFusionKit (= 1.5.1)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - AlamofireImage
     - AlamofireObjectMapper
     - CDYelpFusionKit
     - ObjectMapper
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  AlamofireImage: 1aea346f4dda2f6c67622fa5a89fcbb80d79cc16
   AlamofireObjectMapper: 92b6ce2423a9d159e686f6a1d514a009bf903ddc
   CDYelpFusionKit: 94a7802fa23ef0eb78514c8a6f246f55b6bc91f0
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
 
-PODFILE CHECKSUM: 9190b755643fa8e7a893449090a2c17a682a7bdc
+PODFILE CHECKSUM: 0deb4acdaca9170a51d1b328e0008789b778eb7d
 
 COCOAPODS: 1.5.3
