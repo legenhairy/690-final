@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import CDYelpFusionKit
 
 class YelpDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let yelpAPIClient = CDYelpAPIClient(apiKey: "Ga-yQD1tX5Wk69YYvfUogNtmKJWzcai2x-eSHSfzxZXhxtYsu7tYL_fC3z5yHoUNPqCSIya_6TqM28cedOt6vtelmAJr6bT8kPj0idxukl0R4hPjhoaaNI4ZmcjcXHYx")
         // Do any additional setup after loading the view.
     }
     

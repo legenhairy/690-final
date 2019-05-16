@@ -12,6 +12,7 @@ class ProfileViewController: UIViewController {
 
     @IBOutlet weak var ProfileImageOutlet: UIImageView!
     @IBOutlet weak var NameLabelOutlet: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
