@@ -76,7 +76,7 @@ class YelpItemsViewController: UIViewController, UITableViewDataSource, UITableV
             "Postman-Token": "70bab5f5-fdbb-4a35-8c5f-2945f0781279"
         ]
         /*calling specific business endpoint*/
-        var request = URLRequest(url: URL(string: "https://api.yelp.com/v3/businesses/search?location=San Francisco&term=food")! as URL, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
+        var request = URLRequest(url: URL(string: "https://api.yelp.com/v3/businesses/search?location=San Francisco&term=Food")! as URL, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
         request.httpMethod = "GET"
         request.allHTTPHeaderFields = headers
         
