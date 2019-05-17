@@ -13,6 +13,7 @@ class YelpDetailsViewController: UIViewController {
 
     @IBOutlet weak var ImageOutlet: UIImageView!
     @IBOutlet weak var NameLabel: UILabel!
+    @IBOutlet weak var PhoneLabel: UILabel!
     var business: [String : Any]!
 
     override func viewDidLoad() {
@@ -21,6 +22,7 @@ class YelpDetailsViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         NameLabel.text=business["name"]as!String
+        PhoneLabel.text=business["phone"]as?String
         let imagePath = business["image_url"] as! String
         let businessUrl = URL(string: imagePath)
         ImageOutlet.af_setImage(withURL: businessUrl!)

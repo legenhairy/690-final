@@ -44,7 +44,7 @@ class YelpItemsViewController: UIViewController, UITableViewDataSource, UITableV
                 self.businesses = dataDictionary["businesses"] as! [[String: Any]]
                 
                 self.tableView.reloadData()
-                
+                //Ignore Complaint about reloadData, it's fine, don't worry about it
                 print(dataDictionary)
             }
         })
