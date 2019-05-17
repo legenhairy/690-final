@@ -11,10 +11,19 @@ import CDYelpFusionKit
 
 class YelpDetailsViewController: UIViewController {
 
+    @IBOutlet weak var ImageOutlet: UIImageView!
+    @IBOutlet weak var NameLabel: UILabel!
+    var business: [String : Any]!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         let yelpAPIClient = CDYelpAPIClient(apiKey: "Ga-yQD1tX5Wk69YYvfUogNtmKJWzcai2x-eSHSfzxZXhxtYsu7tYL_fC3z5yHoUNPqCSIya_6TqM28cedOt6vtelmAJr6bT8kPj0idxukl0R4hPjhoaaNI4ZmcjcXHYx")
         // Do any additional setup after loading the view.
+        
+        NameLabel.text=business["name"]as!String
+        let imagePath = business["image_url"] as! String
+        let businessUrl = URL(string: imagePath)
+        ImageOutlet.af_setImage(withURL: businessUrl!)
     }
     
 

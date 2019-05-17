@@ -87,5 +87,18 @@ class YelpItemsViewController: UIViewController, UITableViewDataSource, UITableV
         // Pass the selected object to the new view controller.
     }
     */
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! UITableViewCell
+        let IndexPath = tableView.indexPath(for: cell)!
+    
+        let business = businesses[IndexPath.row]
+    
+        let detailsViewController=segue.destination as! YelpDetailsViewController
+        detailsViewController.business = business
+    
+        tableView.deselectRow(at: IndexPath, animated: true)
+    
+    }
+
 
 }
