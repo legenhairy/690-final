@@ -60,13 +60,14 @@ class YelpItemsViewController: UIViewController, UITableViewDataSource, UITableV
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         // to limit network activity, reload half a second after last key press.
-        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: "reload", object: nil)
-        self.perform("refreshFeed", with: nil, afterDelay: 1.0)
+        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: Selector(("refreshFeed")), object: nil)
+        self.perform(Selector(("refreshFeed")), with: nil, afterDelay: 1.0)
     }
     
     /*refresh the feed automatically based on the user input*/
     func refreshFeed() {
         let userText = searchBar.text ?? ""
+        let encodedSearchText = userText.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
         
         let headers = [
             "Authorization": "Bearer Ga-yQD1tX5Wk69YYvfUogNtmKJWzcai2x-eSHSfzxZXhxtYsu7tYL_fC3z5yHoUNPqCSIya_6TqM28cedOt6vtelmAJr6bT8kPj0idxukl0R4hPjhoaaNI4ZmcjcXHYx",
@@ -74,7 +75,7 @@ class YelpItemsViewController: UIViewController, UITableViewDataSource, UITableV
             "Postman-Token": "70bab5f5-fdbb-4a35-8c5f-2945f0781279"
         ]
         /*calling specific business endpoint*/
-        var request = URLRequest(url: URL(string: "https://api.yelp.com/v3/businesses/search?location=San Francisco&term=\(userText)")! as URL, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
+        var request = URLRequest(url: URL(string: "https://api.yelp.com/v3/businesses/search?location=San Francisco&term=\(encodedSearchText)")! as URL, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
         request.httpMethod = "GET"
         request.allHTTPHeaderFields = headers
         
