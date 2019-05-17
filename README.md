@@ -12,9 +12,9 @@ An app that uses the Yelp API to find the nearest restaurant from a user.
 **Required Must-have Features**
 
 * [ ] User should be able to search for nearby businesses. (must include search bar)
-* [ ] User should be able to see a list of results even before searching for something.
-* [ ] User should be able to see more details about a specific business when he or she clicks on it.
-* [ ] User can see a profile as well as Home tab bar.
+* [x] User should be able to see a list of results even before searching for something.
+* [x] User should be able to see more details about a specific business when he or she clicks on it.
+* [x] User can see a profile as well as Home tab bar.
 
 **Optional Nice-to-have Stories**
 
