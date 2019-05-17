@@ -60,14 +60,14 @@ class YelpItemsViewController: UIViewController, UITableViewDataSource, UITableV
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         // to limit network activity, reload half a second after last key press.
-        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: Selector(("refreshFeed")), object: nil)
-        self.perform(Selector(("refreshFeed")), with: nil, afterDelay: 1.0)
+        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(self.refreshFeed), object: nil)
+        self.perform(#selector(self.refreshFeed), with: nil, afterDelay: 1.0)
     }
     
     /*refresh the feed automatically based on the user input*/
-    func refreshFeed() {
-        let userText = searchBar.text ?? ""
-        let encodedSearchText = userText.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+    @objc func refreshFeed() {
+        let userText = searchBar.text
+        let encodedSearchText = userText?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         
         let headers = [
             "Authorization": "Bearer Ga-yQD1tX5Wk69YYvfUogNtmKJWzcai2x-eSHSfzxZXhxtYsu7tYL_fC3z5yHoUNPqCSIya_6TqM28cedOt6vtelmAJr6bT8kPj0idxukl0R4hPjhoaaNI4ZmcjcXHYx",
@@ -92,6 +92,8 @@ class YelpItemsViewController: UIViewController, UITableViewDataSource, UITableV
                 print(dataDictionary)
             }
         })
+    
+        dataTask.resume()
     }
     
     
