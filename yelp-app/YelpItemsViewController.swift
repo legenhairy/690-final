@@ -66,8 +66,8 @@ class YelpItemsViewController: UIViewController, UITableViewDataSource, UITableV
     
     /*refresh the feed automatically based on the user input*/
     @objc func refreshFeed() {
-        let userText = searchBar.text
-        let encodedSearchText = userText?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        let userText = searchBar.text as! String
+        let encodedSearchText = userText.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         
         let headers = [
             "Authorization": "Bearer Ga-yQD1tX5Wk69YYvfUogNtmKJWzcai2x-eSHSfzxZXhxtYsu7tYL_fC3z5yHoUNPqCSIya_6TqM28cedOt6vtelmAJr6bT8kPj0idxukl0R4hPjhoaaNI4ZmcjcXHYx",
